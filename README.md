@@ -45,7 +45,7 @@ graph LR
 
 ## Component Relationships
 Each OpenClaw project plays a critical role within the broader enterprise platform architecture:
-- **[openclaw-cloud-landing-zone(https://github.com/m-aboud/openclaw-cloud-landing-zone)]**: Provides the secure cloud infrastructure foundation for all other components.
+- **[(openclaw-cloud-landing-zone)(https://github.com/m-aboud/openclaw-cloud-landing-zone)]**: Provides the secure cloud infrastructure foundation for all other components.
 - **openclaw-platform-engineering-kit**: Leverages the landing zone to build internal developer platforms and self-service tools.
 - **openclaw-gitops-control-plane**: Manages infrastructure and application deployments declaratively within the landing zone, enabled by the platform engineering foundation.
 - **openclaw-zero-trust-platform**: Enforces security policies across all components, integrating with the landing zone and control planes.
