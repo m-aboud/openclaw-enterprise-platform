@@ -46,14 +46,14 @@ graph LR
 ## Component Relationships
 Each OpenClaw project plays a critical role within the broader enterprise platform architecture:
 - **[OpenClaw Cloud Landing Zone](https://github.com/m-aboud/openclaw-cloud-landing-zone)**: Provides the secure cloud infrastructure foundation for all other components.
-- **openclaw-platform-engineering-kit**: Leverages the landing zone to build internal developer platforms and self-service tools.
-- **openclaw-gitops-control-plane**: Manages infrastructure and application deployments declaratively within the landing zone, enabled by the platform engineering foundation.
-- **openclaw-zero-trust-platform**: Enforces security policies across all components, integrating with the landing zone and control planes.
-- **openclaw-enterprise-control-plane**: Provides overarching governance and management across all OpenClaw projects.
-- **openclaw-devops-copilot**: An AI-powered assistant that integrates with various platform components to automate DevOps tasks.
-- **openclaw-sre-platform**: Provides observability and reliability tools for all components, crucial for operational excellence.
-- **openclaw-mcp-agentic-lab**: Explores and develops advanced AI agent capabilities that can be integrated into the MCP Agent Runtime.
-- **ai-infrastructure-blueprints**: Provides standardized designs and deployment patterns for the underlying infrastructure supporting AI applications and the MCP Agent Runtime.
+- **[OpenClaw Platform Engineering Kit](https://github.com/m-aboud/openclaw-platform-engineering-kit)**: Leverages the landing zone to build internal developer platforms and self-service tools.
+- **[OpenClaw GitOps Control Plane](https://github.com/m-aboud/openclaw-gitops-control-plane)**: Manages infrastructure and application deployments declaratively within the landing zone, enabled by the platform engineering foundation.
+- **[OpenClaw Zero Trust Platform](https://github.com/m-aboud/openclaw-zero-trust-platform)**: Enforces security policies across all components, integrating with the landing zone and control planes.
+- **[OpenClaw Enterprise Control Plane](https://github.com/m-aboud/openclaw-enterprise-control-plane)**: Provides overarching governance and management across all OpenClaw projects.
+- **[OpenClaw DevOps Copilot](https://github.com/m-aboud/openclaw-devops-copilot)**: An AI-powered assistant that integrates with various platform components to automate DevOps tasks.
+- **[OpenClaw SRE Platform](https://github.com/m-aboud/openclaw-sre-platform)**: Provides observability and reliability tools for all components, crucial for operational excellence.
+- **[OpenClaw MCP Agentic Lab](https://github.com/m-aboud/openclaw-mcp-agentic-lab)**: Explores and develops advanced AI agent capabilities that can be integrated into the MCP Agent Runtime.
+- **[AI Infrastructure Blueprints](https://github.com/m-aboud/ai-infrastructure-blueprints)**: Provides standardized designs and deployment patterns for the underlying infrastructure supporting AI applications and the MCP Agent Runtime.
 
 ## Technology Stack
 - **Cloud Providers**: AWS, Azure, GCP
