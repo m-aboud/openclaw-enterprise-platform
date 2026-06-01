@@ -20,7 +20,6 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
 8.  **SRE & Observability**: The operational excellence layer, providing comprehensive monitoring, logging, tracing, incident management, and performance optimization tools to ensure high reliability and operational efficiency.
 
 ## Enterprise Architecture Diagram
----
     mermaid
     graph TD
         A[Cloud Landing Zone] --> B(Platform Engineering Foundation)
@@ -43,7 +42,7 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
         end
     
         subgraph Integrations
-            I["Cloud Providers (AWS, Azure, GCP)"] --> A
+            I_cloud[Cloud Providers] --> A
             J[Developer Tools] -- Interacts with --> B
             K[Git Repositories] -- Source of Truth --> C
             L[Identity Providers] -- Authenticates & Authorizes --> D
@@ -56,7 +55,12 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
         Core Components -- Governed by --> Q[Governance & Compliance]
         Core Components -- Documented in --> R[Architecture & Documentation]
         Core Components -- Maintained by --> S[Platform Team]
----
+    
+        %% Adding a note for the specific cloud providers if needed
+        note over I_cloud
+            (AWS, Azure, GCP)
+        end
+
     
 
 
