@@ -1,0 +1,15 @@
+
+# macOS
+.DS_Store
+
+# Python
+*.pyc
+__pycache__/
+.venv/
+venv/
+
+# Hermes temporary files
+.hermes/
+/tmp/
+*.json
+*.txt
