@@ -20,42 +20,44 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
 8.  **SRE & Observability**: The operational excellence layer, providing comprehensive monitoring, logging, tracing, incident management, and performance optimization tools to ensure high reliability and operational efficiency.
 
 ## Enterprise Architecture Diagram
-```mermaid
-graph TD
-    A[Cloud Landing Zone] --> B(Platform Engineering Foundation)
-    B --> C(GitOps Control Plane)
-    C --> D(Zero Trust Security)
-    D --> E(Enterprise Control Plane)
-    E --> F(MCP Agent Runtime)
-    F --> G(AI Applications)
-    G --> H(SRE & Observability)
+    mermaid
+    graph TD
+        A[Cloud Landing Zone] --> B(Platform Engineering Foundation)
+        B --> C(GitOps Control Plane)
+        C --> D(Zero Trust Security)
+        D --> E(Enterprise Control Plane)
+        E --> F(MCP Agent Runtime)
+        F --> G(AI Applications)
+        G --> H(SRE & Observability)
+    
+        subgraph Core Components
+            A
+            B
+            C
+            D
+            E
+            F
+            G
+            H
+        end
+    
+        subgraph Integrations
+            I["Cloud Providers (AWS, Azure, GCP)"] --> A
+            J[Developer Tools] -- Interacts with --> B
+            K[Git Repositories] -- Source of Truth --> C
+            L[Identity Providers] -- Authenticates & Authorizes --> D
+            M[Policy Engines] -- Enforces Policies --> E
+            N[AI Models] -- Runs on --> F
+            O[Business Applications] -- Utilizes --> G
+            P[Monitoring & Alerting] -- Feeds into --> H
+        end
+    
+        Core Components -- Governed by --> Q[Governance & Compliance]
+        Core Components -- Documented in --> R[Architecture & Documentation]
+        Core Components -- Maintained by --> S[Platform Team]
+    
+    
 
-    subgraph Core Components
-        A
-        B
-        C
-        D
-        E
-        F
-        G
-        H
-    end
-
-    subgraph Integrations
-        I[Cloud Providers (AWS, Azure, GCP)] --> A
-        J[Developer Tools] -- Interacts with --> B
-        K[Git Repositories] -- Source of Truth --> C
-        L[Identity Providers] -- Authenticates & Authorizes --> D
-        M[Policy Engines] -- Enforces Policies --> E
-        N[AI Models] -- Runs on --> F
-        O[Business Applications] -- Utilizes --> G
-        P[Monitoring & Alerting] -- Feeds into --> H
-    end
-
-    Core Components -- Governed by --> Q[Governance & Compliance]
-    Core Components -- Documented in --> R[Architecture & Documentation]
-    Core Components -- Maintained by --> S[Platform Team]
-```
 
 ## Component Relationships
 Each OpenClaw project plays a critical role within the broader enterprise platform architecture:
