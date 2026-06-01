@@ -20,48 +20,87 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
 8.  **SRE & Observability**: The operational excellence layer, providing comprehensive monitoring, logging, tracing, incident management, and performance optimization tools to ensure high reliability and operational efficiency.
 
 ## Enterprise Architecture Diagram
-    mermaid
-    graph TD
-        A[Cloud Landing Zone] --> B(Platform Engineering Foundation)
-        B --> C(GitOps Control Plane)
-        C --> D(Zero Trust Security)
-        D --> E(Enterprise Control Plane)
-        E --> F(MCP Agent Runtime)
-        F --> G(AI Applications)
-        G --> H(SRE & Observability)
-    
-        subgraph Core Components
-            A
-            B
-            C
-            D
-            E
-            F
-            G
-            H
-        end
-    
-        subgraph Integrations
-            I_cloud[Cloud Providers] --> A
-            J[Developer Tools] -- Interacts with --> B
-            K[Git Repositories] -- Source of Truth --> C
-            L[Identity Providers] -- Authenticates & Authorizes --> D
-            M[Policy Engines] -- Enforces Policies --> E
-            N[AI Models] -- Runs on --> F
-            O[Business Applications] -- Utilizes --> G
-            P[Monitoring & Alerting] -- Feeds into --> H
-        end
-    
-        Core Components -- Governed by --> Q[Governance & Compliance]
-        Core Components -- Documented in --> R[Architecture & Documentation]
-        Core Components -- Maintained by --> S[Platform Team]
-    
-        %% Adding a note for the specific cloud providers if needed
-        note over I_cloud
-            (AWS, Azure, GCP)
-        end
 
-    
+```mermaid
+graph TD
+
+    A[Cloud Landing Zone]
+    B[Platform Engineering Foundation]
+    C[GitOps Control Plane]
+    D[Zero Trust Security]
+    E[Enterprise Control Plane]
+    F[MCP Agent Runtime]
+    G[AI Applications]
+    H[SRE & Observability]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+
+    subgraph Core_Platform
+        A
+        B
+        C
+        D
+        E
+        F
+        G
+        H
+    end
+
+    I[Cloud Providers<br/>AWS / Azure / GCP]
+    J[Developer Tools]
+    K[Git Repositories]
+    L[Identity Providers]
+    M[Policy Engines]
+    N[AI Models]
+    O[Business Applications]
+    P[Monitoring & Alerting]
+
+    I --> A
+    J --> B
+    K --> C
+    L --> D
+    M --> E
+    N --> F
+    O --> G
+    P --> H
+
+    Q[Governance & Compliance]
+    R[Architecture & Documentation]
+    S[Platform Team]
+
+    Q -. Governs .-> A
+    Q -. Governs .-> B
+    Q -. Governs .-> C
+    Q -. Governs .-> D
+    Q -. Governs .-> E
+    Q -. Governs .-> F
+    Q -. Governs .-> G
+    Q -. Governs .-> H
+
+    R -. Documents .-> A
+    R -. Documents .-> B
+    R -. Documents .-> C
+    R -. Documents .-> D
+    R -. Documents .-> E
+    R -. Documents .-> F
+    R -. Documents .-> G
+    R -. Documents .-> H
+
+    S -. Maintains .-> A
+    S -. Maintains .-> B
+    S -. Maintains .-> C
+    S -. Maintains .-> D
+    S -. Maintains .-> E
+    S -. Maintains .-> F
+    S -. Maintains .-> G
+    S -. Maintains .-> H
+```   
 
 
 ## Component Relationships
