@@ -22,85 +22,25 @@ The OpenClaw Enterprise Platform is structured as a layered, interconnected syst
 ## Enterprise Architecture Diagram
 
 ```mermaid
-graph TD
+graph LR
 
-    A[Cloud Landing Zone]
-    B[Platform Engineering Foundation]
-    C[GitOps Control Plane]
-    D[Zero Trust Security]
-    E[Enterprise Control Plane]
-    F[MCP Agent Runtime]
-    G[AI Applications]
-    H[SRE & Observability]
+    CLZ[Cloud Landing Zone]
+    PEF[Platform Engineering Foundation]
+    GITOPS[GitOps Control Plane]
+    ZT[Zero Trust Platform]
+    ECP[Enterprise Control Plane]
+    MCP[MCP Agent Runtime]
+    AI[AI Applications]
+    SRE[SRE & Observability]
 
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-    G --> H
-
-    subgraph Core_Platform
-        A
-        B
-        C
-        D
-        E
-        F
-        G
-        H
-    end
-
-    I[Cloud Providers<br/>AWS / Azure / GCP]
-    J[Developer Tools]
-    K[Git Repositories]
-    L[Identity Providers]
-    M[Policy Engines]
-    N[AI Models]
-    O[Business Applications]
-    P[Monitoring & Alerting]
-
-    I --> A
-    J --> B
-    K --> C
-    L --> D
-    M --> E
-    N --> F
-    O --> G
-    P --> H
-
-    Q[Governance & Compliance]
-    R[Architecture & Documentation]
-    S[Platform Team]
-
-    Q -. Governs .-> A
-    Q -. Governs .-> B
-    Q -. Governs .-> C
-    Q -. Governs .-> D
-    Q -. Governs .-> E
-    Q -. Governs .-> F
-    Q -. Governs .-> G
-    Q -. Governs .-> H
-
-    R -. Documents .-> A
-    R -. Documents .-> B
-    R -. Documents .-> C
-    R -. Documents .-> D
-    R -. Documents .-> E
-    R -. Documents .-> F
-    R -. Documents .-> G
-    R -. Documents .-> H
-
-    S -. Maintains .-> A
-    S -. Maintains .-> B
-    S -. Maintains .-> C
-    S -. Maintains .-> D
-    S -. Maintains .-> E
-    S -. Maintains .-> F
-    S -. Maintains .-> G
-    S -. Maintains .-> H
-```   
+    CLZ --> PEF
+    PEF --> GITOPS
+    GITOPS --> ZT
+    ZT --> ECP
+    ECP --> MCP
+    MCP --> AI
+    AI --> SRE
+```
 
 
 ## Component Relationships
