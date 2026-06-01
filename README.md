@@ -42,7 +42,7 @@ graph TD
     end
 
     subgraph Integrations
-        I[Cloud Providers (AWS, Azure, GCP)] --|Provides Infrastructure|--> A
+        I[Cloud Providers (AWS, Azure, GCP)] --> A
         J[Developer Tools] -- Interacts with --> B
         K[Git Repositories] -- Source of Truth --> C
         L[Identity Providers] -- Authenticates & Authorizes --> D
